@@ -17,7 +17,5 @@ class Application
   end
   
   def item_handler
-    @@items.each do |item|
-      if 
   end
 end
