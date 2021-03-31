@@ -1,6 +1,6 @@
 class Application
   
-  @@item = []
+  @@items = []
   
   def call(env)
     resp = Rack::Response.new
@@ -14,5 +14,10 @@ class Application
     end
     
     resp.finish
+  end
+  
+  def item_handler
+    @@items.each do |item|
+      if 
   end
 end
