@@ -11,7 +11,7 @@ class Application
       req_item = req.path.split("/items/").last
       item = @@items.find{|item| item.name == req_item}
       if req_item.nil?
-        resp.write = "Item not found"
+        resp.write "Item not found"
         resp.status = 404
       else
         resp.write item.price
