@@ -10,7 +10,7 @@ class Application
     if req.path.match(/items/)
       req_item = req.path.split("/items/").last
       item = @@items.find{|item| item.name == req_item}
-      if req_item.nil?
+      if item.nil?
         resp.write "Item not found"
         resp.status = 404
       else
