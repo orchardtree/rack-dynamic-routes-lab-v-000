@@ -18,6 +18,7 @@ class Application
   
   def item_handler
     req_item = req.path.split("/item/").last
+    item = item.find
     
   end
 end
