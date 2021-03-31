@@ -18,7 +18,7 @@ class Application
   
   def item_handler
     req_item = req.path.split("/item/").last
-    item = item.find
+    item = @@items.find{|item| item.name == req_item}
     
   end
 end
