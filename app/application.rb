@@ -17,7 +17,7 @@ class Application
   end
   
   def item_handler
-    @req = 
+    req_item = req.path.split(/item/)
     
   end
 end
