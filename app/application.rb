@@ -3,10 +3,10 @@ class Application
   @@items = []
   
   def call(env)
-    @resp = Rack::Response.new
-    @req = Rack::Request.new(env)
+    resp = Rack::Response.new
+    req = Rack::Request.new(env)
     
-    if @req.path.match(/items/)
+    if req.path.match(/items/)
       item_handler
     else
       resp.write "Route not found"
@@ -20,6 +20,5 @@ class Application
     req_item = req.path.split("/item/").last
     item = @@items.find{|item| item.name == req_item}
     resp.write item.price
-    
   end
 end
