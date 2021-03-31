@@ -1,3 +1,4 @@
+require 'pry'
 class Application
   
   @@items = []
@@ -10,6 +11,7 @@ class Application
       req_item = req.path.split("/item/").last
       item = @@items.find{|item| item.name == req_item}
       resp.write item.price
+      binding.pry
     else
       resp.write "Route not found"
       resp.status = 404
