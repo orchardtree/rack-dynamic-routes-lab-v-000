@@ -19,7 +19,7 @@ class Application
   def item_handler
     req_item = req.path.split("/item/").last
     item = @@items.find{|item| item.name == req_item}
-    resp.write 
+    resp.write item.price
     
   end
 end
